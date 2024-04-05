@@ -39,4 +39,23 @@ public int getTeskMark(){
 public int getExamMark(){
     return this.examMark;
 }
+public void setFname(String fname){
+    this.fname=fname;
+}
+
+public void setSubject(String subject){
+    this.subject=subject;
+}
+
+public void setAssignmentMark(int assignmentMark){
+    this.assignmentMark=assignmentMark;
+}
+
+public void setTeskMark(int testMark){
+    this.testMark=testMark;
+}
+public void setExamMark(int examMark){
+    this.examMark=examMark;
+}
+
 }
