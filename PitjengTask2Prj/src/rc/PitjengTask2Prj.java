@@ -10,9 +10,8 @@ package rc;
  */
 public class PitjengTask2Prj {
 
-    /**
-     * @param args the command line arguments
-     */
+    static Learner ab = new Learner();
+    
     public static void main(String[] args) {
         // TODO code application logic here
     }
