@@ -57,5 +57,7 @@ public void setTeskMark(int testMark){
 public void setExamMark(int examMark){
     this.examMark=examMark;
 }
-
+public double calcFinalMark(){
+    return getAssignmentMark() + getTeskMark() + getExamMark() /3;
+}
 }
