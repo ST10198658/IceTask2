@@ -25,4 +25,20 @@ public class PitjengTask2Prj {
         ab.setTeskMark(Integer.parseInt(JOptionPane.showInputDialog("Enter the Test mark: ")));
         ab.setExamMark(Integer.parseInt(JOptionPane.showInputDialog("Enter the Exam mark: ")));
     }
+    
+    public static void displayFinalMark(){
+        String fname = ab.getFname();
+        String subject = ab.getSubject();
+        int assignmentMark = ab.getAssignmentMark();
+        int testMark = ab.getTeskMark();
+        int examMark = ab.getExamMark();
+        double totalMark = ab.calcFinalMark();
+        
+        JOptionPane.showMessageDialog(null, "Your Name: "+fname);
+        JOptionPane.showMessageDialog(null, "Your Subject: "+subject);
+        JOptionPane.showMessageDialog(null, "Assignment Result: "+assignmentMark);
+        JOptionPane.showMessageDialog(null, "Test Result: "+testMark);
+        JOptionPane.showMessageDialog(null, "Exam Result: "+examMark);
+        JOptionPane.showMessageDialog(null, "Total Mark Result: "+totalMark);
+    }
 }
