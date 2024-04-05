@@ -4,6 +4,8 @@
  */
 package rc;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author RC_Student_lab
@@ -15,5 +17,12 @@ public class PitjengTask2Prj {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+    public static void getLearnerInput(){
+        
+        ab.setFname(JOptionPane.showInputDialog("Enter Full Name: "));
+        ab.setSubject(JOptionPane.showInputDialog("Enter the Subject: "));
+        ab.setAssignmentMark(Integer.parseInt(JOptionPane.showInputDialog("Enter the Assignment mark: ")));
+        ab.setTeskMark(Integer.parseInt(JOptionPane.showInputDialog("Enter the Test mark: ")));
+        ab.setExamMark(Integer.parseInt(JOptionPane.showInputDialog("Enter the Exam mark: ")));
+    }
 }
