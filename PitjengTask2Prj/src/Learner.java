@@ -21,5 +21,22 @@ public class Learner {
     this.testMark=0;
     this.examMark=0;   
 } 
-    
+    public String getFname(){
+    return this.fname;
+}
+
+public String getSubject(){
+    return this.subject;
+}
+
+public int getAssignmentMark(){
+    return this.assignmentMark;
+}
+
+public int getTeskMark(){
+    return this.testMark;
+}
+public int getExamMark(){
+    return this.examMark;
+}
 }
