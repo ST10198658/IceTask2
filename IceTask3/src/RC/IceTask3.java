@@ -14,9 +14,10 @@ public class IceTask3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Accounts array initialization.
        Login [] accounts = {};
         menu(accounts);
     }
-    
+    static void menu (Login [] accounts){
     
 }
