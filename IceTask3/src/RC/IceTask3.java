@@ -24,6 +24,8 @@ public class IceTask3 {
         System.out.println("Log in, Create New Account."+"\n"+"\n"+"1. Create a NEW account."+"\n"+"2. LOG IN to YOUR account."
             + "\n3. Close." );
         Scanner ab = new Scanner(System.in);
+        
+        String input = ab.nextLine();
     }
     
 }
