@@ -26,6 +26,9 @@ public class IceTask3 {
         Scanner ab = new Scanner(System.in);
         
         String input = ab.nextLine();
+        
+        accounts = processResponse(input, accounts);
+       menu(accounts);
     }
     
 }
