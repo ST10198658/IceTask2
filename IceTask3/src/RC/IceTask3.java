@@ -38,5 +38,21 @@ public class IceTask3 {
         }else{
                 menu(accounts);
                 }
+            Scanner sc = new Scanner (System.in);
+        switch (response){
+            //If user selects "1", create a new account.
+            case 1:
+                Login[] newAccount = new Login[accounts.length + 1];
+                Login acc = new Login();
+                for (int i = 0; i< accounts.length;i++){
+                    newAccount[i] = accounts[i];
+                }
+                acc.newAccount();
+                newAccount[newAccount.length-1]= acc;
+                for (int x = 0; x < newAccount.length;x++){
+                    System.out.println("ACCOUNTS ON SYSTEM:  "
+                            + "\nNAME of user:" + newAccount[x].getFirstName());
+                }
+                return newAccount;
         }          
     
