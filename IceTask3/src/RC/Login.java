@@ -5,6 +5,8 @@
 package RC;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -147,7 +149,7 @@ public class Login {
         password = sc.next();
         
         Pattern pattern = Pattern.compile("[^a-zA-Z0-9]");
-        Matcher matcher = pattern.matcher(password);
+        Matchers matcher = pattern.matcher(password);
         if(matcher.find() == true){
         specialChar++;
         };
@@ -160,6 +162,25 @@ public class Login {
             
         }if (password.length() > 8)
              length++;
-}
+        
+        if (specialChar == 0){
+            System.out.println("Password must contain a special charcter.");
+            checkPasswordComplexity();
+        }else if (length == 0){
+            System.out.println("Password must be at least 8 characters long.");
+            checkPasswordComplexity();
+        }else if (digit == 0){
+            System.out.println("Password must contain at least one DIGIT.");
+            checkPasswordComplexity();            
+        }else if (capital == 0){
+            System.out.println("Password must contain at least one capital letter.");
+            checkPasswordComplexity();            
+        }else{
+        // If so, store it in the "approved" variable and return.
+        approval = password;
+        }
+        return approval;
+    }
+
     
 
