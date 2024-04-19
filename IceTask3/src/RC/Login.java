@@ -151,6 +151,10 @@ public class Login {
         if(matcher.find() == true){
         specialChar++;
         };
+        for (int i = 0; i < password.length(); i++) {
+        if (Character.isUpperCase(password.charAt(i))) {
+            capital++;
+        }
 }
     
 
