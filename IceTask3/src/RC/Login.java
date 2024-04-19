@@ -127,6 +127,20 @@ public class Login {
          return true;
          }
         return approved;
-    }}
+    }private String newUserName() {
+        String userName = "";
+        Scanner sc = new Scanner(System.in);
+                System.out.println("Please enter your USERNAME......"
+                        + "CONDITIONS: "
+                        + "*\n*"
+                        + "\n1. Username must include an UNDERSCORE \"_\""
+                        + "\n2. Usernname can not be longer than 5 characters.");
+                userName = sc.next();
+                checkUserName(userName);
+                return userName;
+    }static String checkPasswordComplexity() {
+        String approval = "";
+        String password;
+}
     
 
