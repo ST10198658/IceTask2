@@ -145,11 +145,7 @@ public class Login {
         Scanner sc = new Scanner(System.in);
         System.out.println("PASSWORD: ");
         password = sc.next();
-        //Is this password secure? (Does it meet the requirements?)
-        //Is the length acceptable?
         
-        //Check the input for any character which is not a letter or digit, ergo, it is a special character.
-        //Look for special characters.
         Pattern pattern = Pattern.compile("[^a-zA-Z0-9]");
         Matcher matcher = pattern.matcher(password);
         if(matcher.find() == true){
