@@ -40,7 +40,7 @@ public class IceTask3 {
                 }
             Scanner sc = new Scanner (System.in);
         switch (response){
-            //If user selects "1", create a new account.
+            
             case 1:
                 Login[] newAccount = new Login[accounts.length + 1];
                 Login acc = new Login();
