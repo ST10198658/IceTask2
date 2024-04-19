@@ -154,6 +154,9 @@ public class Login {
         for (int i = 0; i < password.length(); i++) {
         if (Character.isUpperCase(password.charAt(i))) {
             capital++;
+            
+        }if (Character.isDigit(password.charAt(i))) {
+            digit++;
         }
 }
     
