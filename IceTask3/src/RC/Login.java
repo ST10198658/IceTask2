@@ -72,6 +72,37 @@ public class Login {
                 uName = newUserName();
                 
                 boolean userNameApproved = checkUserName(uName);
+                
+                while (userNameApproved == false){
+                    System.out.println("Username does not meet requirements!");
+                    uName = newUserName();
+                    userNameApproved = checkUserName(uName);
+                }
+                this.username = uName;
+                //Prompt for password.
+                System.out.println("*\n*\n*\nPlease enter your PASSWORD......*\n*");
+                System.out.println(""
+                        + "CONDITIONS: "
+                        + "*\n*"
+                        + "\n1. Password must contain a capital letter."
+                        + "\n2. Password must contain at least one special character."
+                        + "\n3. Password must be at least 8 characters long."
+                        + "\n4. Password must contain at least one digit.");
+                String pass = checkPasswordComplexity();
+                setPass(pass);
+               
+                
+                System.out.println("Account created." );     
+                System.out.println("Username: "
+                        + this.username
+                        + "\n"
+                        + "First Name: "
+                        + this.firstName
+                        + "\n"
+                        + "Last Name: "
+                        + this.lastName
+                        + "\n");
+}
     
     }
-}
+
