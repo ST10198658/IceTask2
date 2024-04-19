@@ -16,20 +16,21 @@ public class IceTask3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Accounts array initialization.
-       Login [] accounts = {};
+        Login [] accounts = {};
         menu(accounts);
     }
     static void menu (Login [] accounts){
+    //Prompt user whether they'd like to login or create a new account.
         System.out.println("Log in, Create New Account."+"\n"+"\n"+"1. Create a NEW account."+"\n"+"2. LOG IN to YOUR account."
-            + "\n3. Close." );
+                + "\n3. Close." );
         Scanner ab = new Scanner(System.in);
-        
+    //Receive menu selection.
         String input = ab.nextLine();
-        
-        accounts = processResponse(input, accounts);
+    //Process menu selection by user as stored in "response" varible.
+       accounts = processResponse(input, accounts);
        menu(accounts);
     }
+//Switch statement to process menu selection from user.
     static Login[] processResponse(String input, Login[] accounts){
         int response = 0;
         for (int i = 0; i < input.length(); i++){             
@@ -38,9 +39,10 @@ public class IceTask3 {
         }else{
                 menu(accounts);
                 }
-            Scanner sc = new Scanner (System.in);
+        }          
+        Scanner sc = new Scanner (System.in);
         switch (response){
-            
+            //If user selects "1", create a new account.
             case 1:
                 Login[] newAccount = new Login[accounts.length + 1];
                 Login acc = new Login();
@@ -54,17 +56,21 @@ public class IceTask3 {
                             + "\nNAME of user:" + newAccount[x].getFirstName());
                 }
                 return newAccount;
-        }  case 2:
+                //If user selects "2", allow the user to attempt to log in, if there are no accounts, state so and redisplay the main menu.
+            case 2:
                 if (accounts.length < 0)
                 {System.out.println("No accounts!");
                 menu(accounts);                
                 break;
                 }
+                //If there are accounts available, proceed.
                 else{
                 System.out.println("Log in to new account." );
                 System.out.println("Please enter your USERNAME: " );
                 String userLogin = sc.next();
-                int matches = 0;for (int i = 0; i < accounts.length;){
+                int matches = 0;
+                //Find user account in "accounts" array using userName entered.
+                for (int i = 0; i < accounts.length;){
                 if (userLogin.equals(accounts[i].getUsername())){                  
                     matches++;
                     System.out.println("Account found.");
@@ -90,5 +96,9 @@ public class IceTask3 {
                 menu(accounts);
                 break;        
         }
-    return accounts;}}          
+    return accounts;
+        
+        
+    }
+    }     
     
