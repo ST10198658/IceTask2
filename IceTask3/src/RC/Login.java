@@ -67,6 +67,9 @@ public class Login {
                 System.out.println("*\n*\n*\nPlease enter your LAST NAME......*\n*\n*\n");
                 name = sc.next();
                 setLastName(name);
+                
+                String uName;
+                uName = newUserName();
     
     }
 }
