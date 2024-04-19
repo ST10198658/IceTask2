@@ -157,7 +157,9 @@ public class Login {
             
         }if (Character.isDigit(password.charAt(i))) {
             digit++;
-        }
+            
+        }if (password.length() > 8)
+             length++;
 }
     
 
