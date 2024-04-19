@@ -54,11 +54,15 @@ public class IceTask3 {
                             + "\nNAME of user:" + newAccount[x].getFirstName());
                 }
                 return newAccount;
-        }//If user selects "2", allow the user to attempt to log in, if there are no accounts, state so and redisplay the main menu.
-            case 2:
+        }  case 2:
                 if (accounts.length < 0)
                 {System.out.println("No accounts!");
                 menu(accounts);                
                 break;
-                }          
+                }//If there are accounts available, proceed.
+                else{
+                System.out.println("Log in to new account." );
+                System.out.println("Please enter your USERNAME: " );
+                String userLogin = sc.next();
+                int matches = 0;          
     
