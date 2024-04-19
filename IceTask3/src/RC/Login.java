@@ -102,7 +102,23 @@ public class Login {
                         + "Last Name: "
                         + this.lastName
                         + "\n");
-}
+} public boolean checkUserName(String uName) {
+        boolean approved = false;
+        int underScore = 0, length = 0;
+        
+        //While the username does not meet the requirements, keep prompting for a new username.
+        if (!uName.contains("_")){
+            System.out.println("*\n*\n*\nUSERNAME MUST CONTAIN AN UNDERSCORE.\n*\n*\n*");
+        }
+        else{
+        underScore++;
+        }
+        if (uName.length() > 5){
+            System.out.println("*\n*\n*\nUSERNAME MUST BE LESS THAN 5 CHARACTERS.\n*\n*\n*");     
+        } 
+        else {
+        length++;
+        }
     
-    }
+    }}
 
