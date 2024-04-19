@@ -141,6 +141,8 @@ public class Login {
     }static String checkPasswordComplexity() {
         String approval = "";
         String password;
+        int length = 0, capital = 0, digit = 0, specialChar = 0;
+        Scanner sc = new Scanner(System.in);
 }
     
 
