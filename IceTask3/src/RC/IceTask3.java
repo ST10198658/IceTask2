@@ -59,10 +59,36 @@ public class IceTask3 {
                 {System.out.println("No accounts!");
                 menu(accounts);                
                 break;
-                }//If there are accounts available, proceed.
+                }
                 else{
                 System.out.println("Log in to new account." );
                 System.out.println("Please enter your USERNAME: " );
                 String userLogin = sc.next();
-                int matches = 0;          
+                int matches = 0;for (int i = 0; i < accounts.length;){
+                if (userLogin.equals(accounts[i].getUsername())){                  
+                    matches++;
+                    System.out.println("Account found.");
+                    accounts[i].passwordVerify(accounts);
+                    i++;
+                }
+                else{i++;}
+                while(matches == 0 && i == accounts.length){
+                    System.out.println("Account not found");
+                    menu(accounts);
+                    break;
+                }
+                }
+                break;
+                }
+            case 3:
+                System.out.println("Closing....." );
+                System.out.println("Goodbye. :)" );
+                System.exit(0);
+                break;                  
+            default:
+                System.out.println("Please make sure to only make selections from the available menu item(s).");
+                menu(accounts);
+                break;        
+        }
+    return accounts;}}          
     
