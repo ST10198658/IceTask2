@@ -4,6 +4,8 @@
  */
 package RC;
 
+import java.util.Scanner;
+
 /**
  *
  * @author RC_Student_lab
@@ -56,6 +58,15 @@ public class Login {
     
     public void newAccount(){   
     Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Create a new account." );
+                
+                System.out.println("*\n*\n*\nPlease enter your FIRST NAME......*\n*\n*\n");
+                String name = sc.next();
+                setfirstName(name);
+                System.out.println("*\n*\n*\nPlease enter your LAST NAME......*\n*\n*\n");
+                name = sc.next();
+                setLastName(name);
     
     }
 }
