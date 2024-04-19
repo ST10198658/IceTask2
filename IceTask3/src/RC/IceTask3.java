@@ -30,5 +30,13 @@ public class IceTask3 {
         accounts = processResponse(input, accounts);
        menu(accounts);
     }
+    static Login[] processResponse(String input, Login[] accounts){
+        int response = 0;
+        for (int i = 0; i < input.length(); i++){             
+            if (Character.isDigit(input.charAt(i))){           
+            response = Integer.parseInt(input);
+        }else{
+                menu(accounts);
+                }
+        }          
     
-}
