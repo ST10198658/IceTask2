@@ -70,6 +70,8 @@ public class Login {
                 
                 String uName;
                 uName = newUserName();
+                
+                boolean userNameApproved = checkUserName(uName);
     
     }
 }
