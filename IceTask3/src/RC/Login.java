@@ -119,6 +119,14 @@ public class Login {
         else {
         length++;
         }
+    //If the username contains an underscore and is shorter than five characters, accept the username;
+         while (length == 0 || underScore == 0){
+         return false;
+        }
+         if (length > 0 && underScore > 0){
+         return true;
+         }
+        return approved;
+    }
     
-    }}
 
