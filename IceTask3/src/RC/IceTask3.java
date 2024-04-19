@@ -4,6 +4,8 @@
  */
 package RC;
 
+import java.util.Scanner;
+
 /**
  *
  * @author RC_Student_lab
@@ -19,5 +21,9 @@ public class IceTask3 {
         menu(accounts);
     }
     static void menu (Login [] accounts){
+        System.out.println("Log in, Create New Account."+"\n"+"\n"+"1. Create a NEW account."+"\n"+"2. LOG IN to YOUR account."
+            + "\n3. Close." );
+        Scanner ab = new Scanner(System.in);
+    }
     
 }
