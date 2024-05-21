@@ -167,3 +167,16 @@ public class Task {
         }
 
     }
+    public void nameTask() {
+    System.out.println("Task name must contain at least two characters.");
+    
+String[] words = sc.next().split(" ");
+String name = Arrays.toString(words);
+name = name.substring(1, name.length() - 1);
+System.out.println(name);
+    if (name.length() < 2) {
+            nameTask();
+        } else {
+            this.taskName = name;
+        }
+}
