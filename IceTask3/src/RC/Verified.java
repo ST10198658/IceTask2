@@ -378,4 +378,13 @@ public void displayTask(){
                 System.out.println("Please select an option from the menu.");
         }
            
+    }public static void displayDoneTasks(Task[] tasks) {
+    int i = 1;
+    for (Task task : tasks) {
+        if (task.status.equals("3")) {
+            System.out.println("*\nDONE Task No. " + i++);
+            System.out.println("DEVELOPER NAME: " + task.devDETAILS + "\nTASK NAME: " + task.taskName + "\n*\n");
+        }
     }
+    System.out.println("Those are all the TASKS with a STATUS of DONE.");
+}
