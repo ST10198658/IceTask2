@@ -188,3 +188,12 @@ String[] newTaskID = new String[tasks.length];
 for (int i = 0; i < tasks.length; i++) {
     newTaskID[i] = tasks[i].taskID;
 }
+taskIDs = newTaskID;
+
+// Create a new destination array with a larger size than the original "tasks" array.
+String[] newTaskDurations = new String[tasks.length];
+
+// copy all the "taskDURATION" from each task in the "tasks" array to the new array
+for (int i = 0; i < tasks.length; i++) {
+    newTaskDurations[i] = tasks[i].taskDURATION;
+}
