@@ -297,3 +297,22 @@ public void SearchByName(){
   }
 }
 }
+public void SearchByTaskID(){
+    Scanner sc = new Scanner(System.in);
+// Prompt user for known developer name.
+    System.out.println("Please enter the IDENTIFICATION NUMBER of the developer of the task you are looking for.");
+    System.out.print("\nTASK ID: ");
+    String target = sc.next();
+
+  // Loop through the array
+  for (int i = 0; i < tasks.length; i++) {
+    // Compare each element with the target
+    if (tasks[i].taskID.toLowerCase().contains(target.toLowerCase())) {
+      // Return the index if a match is found
+        System.out.println("Task found!: " + tasks[i].taskID + " at index " + i);
+    }else{
+        // If not found.
+        System.out.println("Not found!");
+  }
+}
+}
