@@ -334,3 +334,22 @@ public void SearchByTaskID(){
   }
 }
 }
+public void SearchByStatus(){
+    Scanner sc = new Scanner(System.in);
+// Prompt user for known developer name.
+    System.out.println("Please enter the STATUS of the task you are looking for.");
+    System.out.print("\nTASK STATUS: ");
+    String target = sc.next();
+
+  // Loop through the array
+  for (int i = 0; i < tasks.length; i++) {
+    // Compare each element with the target
+    if (tasks[i].status.toLowerCase().contains(target.toLowerCase())) {
+      // Return the index if a match is found
+        System.out.println("Task found!: " + tasks[i].status + " at index " + i);
+    }else{
+        // If not found.
+        System.out.println("Not found!");
+  }
+  }
+}
