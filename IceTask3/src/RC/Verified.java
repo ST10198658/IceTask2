@@ -353,3 +353,29 @@ public void SearchByStatus(){
   }
   }
 }
+public void displayTask(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How would you like to display the task list?"
+            + "\n1. Display all tasks with the status of done."
+            + "\n2. Display the DEVELOPER and DURATION of the task "
+            + "\nwith longest duration.");
+        String response = sc.next();
+        switch(response){
+            case "1":
+                System.out.println("Displaying task DEVELOPER and task NAME, and task DURATION"
+                        + "\n of all tasks with STATUS of DONE.\n*\n");
+                displayDoneTasks(tasks);
+                break;
+            case "2":
+                System.out.println("Displayiing the DEVELOPER and DURATION of the task "
+                        + "\nwith the longest DURATION.\n*\n");
+                displayDevDur(tasks);
+                break;
+            case "3":
+                System.out.println("Returning to MAIN MENU.");
+                break;
+            default:
+                System.out.println("Please select an option from the menu.");
+        }
+           
+    }
