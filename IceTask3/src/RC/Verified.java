@@ -209,3 +209,37 @@ for (int i = 0; i < tasks.length; i++) {
       taskStatuses = newTaskStatuses;
         
     }
+    public void SearchTasksMenu(){
+    Scanner sc = new Scanner(System.in);
+// Select search method.
+    System.out.println("Please select a search method"
+            + "\nSearch by:"
+            + "\n1. Developer Name."
+            + "\n2. Task Names."
+            + "\n3. Task ID."
+            + "\n4. Task Duration."
+            + "\n5. Task Status");
+    String response = sc.next();
+    switch (response){
+            case "1":
+                SearchByDeveloper();
+                break;
+            case "2":
+                SearchByName();
+                break;
+            case "3":
+                SearchByTaskID();
+                break;
+            case "4":
+                SearchByDuration();
+                break;
+            case "5":
+                SearchByStatus();
+                break;
+            default:
+                SearchTasksMenu();
+                break;
+
+    }                
+    Verified(tasks);
+}  
