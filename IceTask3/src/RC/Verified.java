@@ -388,3 +388,14 @@ public void displayTask(){
     }
     System.out.println("Those are all the TASKS with a STATUS of DONE.");
 }
+    public static void displayDevDur(Task[] tasks) {
+    Task maxTask = null;
+    int maxDuration = Integer.MIN_VALUE;
+    for (Task task : tasks) {
+        if (task.taskDurationNumerical > maxDuration) {
+            maxDuration = task.taskDurationNumerical;
+            maxTask = task;
+        }
+    }
+    System.out.println("DEVELOPER NAME: " + maxTask.devDETAILS + " \nDURATION - " + "HOURS: " + maxTask.hours + " MINUTES: " + maxTask.minutes + "\n*\n");
+}
