@@ -181,6 +181,22 @@ public class Login {
         }
         return approval;
     }
+        public void passwordVerify(Account [] accounts) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your PASSWORD: ");
+        String password = "";
+               password = sc.next();
+        for (int i = 0; i < accounts.length; i++)
+        if (password.equals(accounts[i].getPass())){
+            System.out.println("Password accepted");
+            this.tasks = returnLoginStatus();
+            return;
+        }
+        else{
+            System.out.println("Password incorrect.");
+            passwordVerify(accounts);
+            return;
+        }
 
     
 
