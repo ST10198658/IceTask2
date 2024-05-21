@@ -57,3 +57,9 @@ public class Task {
                 + "TASK STATUS:");
         taskStatus();
     } 
+ public void Number(Task [] tasks){
+            System.out.println("\n."
+                + "\n."
+                + "TASK NUMBER:");
+        this.taskNUM = (tasks.length + 1);
+    }
