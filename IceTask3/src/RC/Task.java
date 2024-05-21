@@ -183,3 +183,23 @@ System.out.println(name);
     public void taskID(){
         this.taskID = this.taskName.substring(0, 2).toUpperCase() + " : " + this.taskNUM + " : " + this.taskName.substring(this.taskName.length() - 3).toUpperCase();
     }
+    public void taskStatus(){
+    System.out.println("What is the completion status of this task?");
+    System.out.println("1. To Do."
+            + "n/2. Doing."
+            + "n/3. Done.");
+    String response = sc.next();
+    switch (response){
+        case "1":
+            status = "To Do";
+            break;
+        case "2":
+            status = "Doing";
+            break;
+        case "3":
+            status = "Done";
+            break;
+        default:
+            System.out.println("Invalid input, please select from the men");
+           taskStatus(); 
+    }}}
