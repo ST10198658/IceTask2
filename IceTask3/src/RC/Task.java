@@ -180,3 +180,6 @@ System.out.println(name);
             this.taskName = name;
         }
 }
+    public void taskID(){
+        this.taskID = this.taskName.substring(0, 2).toUpperCase() + " : " + this.taskNUM + " : " + this.taskName.substring(this.taskName.length() - 3).toUpperCase();
+    }
