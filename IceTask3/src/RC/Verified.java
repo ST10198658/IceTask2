@@ -315,4 +315,22 @@ public void SearchByTaskID(){
         System.out.println("Not found!");
   }
 }
+}public void SearchByDuration(){
+    Scanner sc = new Scanner(System.in);
+// Prompt user for known developer name.
+    System.out.println("Please enter the DURATION of the task you are looking for.");
+    System.out.print("\nTASK DURATION: ");
+    String target = sc.next();
+
+  // Loop through the array
+  for (int i = 0; i < tasks.length; i++) {
+    // Compare each element with the target
+    if (tasks[i].taskDURATION.toLowerCase().contains(target.toLowerCase())) {
+      // Return the index if a match is found
+        System.out.println("Task found!: " + tasks[i].taskDURATION + " at index " + i);
+    }else{
+        // If not found.
+        System.out.println("Not found!");
+  }
+}
 }
