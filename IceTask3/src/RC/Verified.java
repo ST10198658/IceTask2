@@ -156,4 +156,9 @@ int tasksQauntity = 0;
             Verified(tasks);    
         }
     }
+    public Task newTask() {
+        Task task = new Task(); 
+        task.Tasker();
+        return task;
+    }
 }
