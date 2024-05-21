@@ -167,4 +167,7 @@ int tasksQauntity = 0;
 String[] newDevDETAILSArray = {};
 int length;
 length = tasks.length;
+for (int i = 0; i < length; i++) {
+    newDevDETAILSArray[i] = tasks[i].devDETAILS;
+}
 }
