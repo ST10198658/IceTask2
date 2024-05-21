@@ -77,3 +77,14 @@ public class Task {
         System.out.println("TASK IDENTIFICATION NUMBER:..");
         System.out.println(this.taskID);       
     }
+ public String taskDesc(){
+        System.out.println("Please enter a TASK DESCRIPTION."
+                + "\nTASK DESCRIPTION can not be longer than 50 characters.");
+        String desc = sc.next();
+        while (desc.length()>50){
+        System.out.println("Please enter a TASK DESCRIPTION."
+                + "\nTASK DESCRIPTION can not be longer than 50 characters.");
+        desc = sc.next();
+        }
+        return desc;
+    }
