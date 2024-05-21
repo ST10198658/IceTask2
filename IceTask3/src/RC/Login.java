@@ -197,6 +197,17 @@ public class Login {
             passwordVerify(accounts);
             return;
         }
+        }
+    private static Task[] returnLoginStatus() {
+        System.out.println("Login Sucessful!");
+        // New session with verified user.
+        Verified user = new Verified();
+        Task []tasks = {};
+        Task [] newTask = {};
+        newTask = user.Verified(tasks);
+        tasks = newTask;
+        return tasks;
+    }}
 
     
 
