@@ -161,4 +161,10 @@ int tasksQauntity = 0;
         task.Tasker();
         return task;
     }
+    public void AccrueTaskArrays(){
+    
+// Create a new destination array with a larger size than the original "tasks" array.
+String[] newDevDETAILSArray = {};
+int length;
+length = tasks.length;
 }
