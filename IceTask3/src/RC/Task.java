@@ -88,3 +88,81 @@ public class Task {
         }
         return desc;
     }
+ public void devDeets(){
+        System.out.println("The first and last name of the developer assigned to the task.");
+        String fName, name = " ", lName;
+        System.out.println("FIRST NAME: ");
+        fName = sc.next();
+        System.out.println("LAST NAME: ");
+        lName = sc.next();
+        System.out.println("Save name?\n" + fName + " " + lName);
+        System.out.println("Save-1."
+                + "\nRename-2.");
+        int x = sc.nextInt();
+        switch(x){
+            case 1:
+                name = fName + " " + lName;
+                this.devDETAILS = name;
+                break;
+            case 2:
+                devDeets();
+                break;
+            default:
+        System.out.println("Save name?" + fName + " " + lName);
+        System.out.println("Save-1"
+                + "\nRename-2");
+        x = sc.nextInt();
+                switch(x){
+            case 1:
+                name = fName + " " + lName;
+                this.devDETAILS = name;
+                break;
+            case 2:
+                devDeets();
+                break;
+        }
+    }
+}
+    public void setDuration(){
+        System.out.println("Estimated duration of TASK?");
+        System.out.println("Hours: ");
+        int i = sc.nextInt();
+        System.out.println("Minutes: ");
+        int j = sc.nextInt();
+        String duration = String.format("%02d", i) + ":" + String.format("%02d", j);
+        System.out.println("Save this duration?"
+                + "\n1.Save."
+                + "\n2.Re-set.");
+                int x = sc.nextInt();
+        switch(x){
+            case 1:
+                this.hours = i;
+                this.minutes = j;
+                duration = String.format("%02d", i) + ":" + String.format("%02d", j);
+                System.out.println("Duration, hours: " + this.hours + " and " + this.minutes + "minutes.");
+                this.taskDURATION = duration;
+                break;
+            case 2:
+                setDuration();
+                break;
+            default:
+        System.out.println("Save this duration?"
+                + "\n1.Save."
+                + "\n2.Re-set.");
+                x = sc.nextInt();
+                switch(x){
+            case 1:
+                this.hours = i;
+                this.minutes = j;
+                duration = String.format("%02d", i) + ":" + String.format("%02d", j);
+                System.out.println("Duration, hours: " + this.hours + " and " + this.minutes + "minutes.");
+                this.taskDURATION = duration;                
+                break;
+            case 2:
+                setDuration();
+                break; 
+                }
+                
+        }
+
+    }
