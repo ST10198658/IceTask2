@@ -63,3 +63,17 @@ public class Task {
                 + "TASK NUMBER:");
         this.taskNUM = (tasks.length + 1);
     }
+ public void showReport(){
+        System.out.println("TASK NAME:...................");
+        System.out.println(this.taskName);
+        System.out.println("TASK NUMBER:.................");
+        System.out.println("0" + this.taskNUM);
+        System.out.println("TASK DESCRIPTION:............");
+        System.out.println(this.taskDESC);
+        System.out.println("DEVELOPER DETAILS:...........");
+        System.out.println(this.devDETAILS);
+        System.out.println("TASK DURATION:...............");
+        System.out.println(this.taskDURATION);
+        System.out.println("TASK IDENTIFICATION NUMBER:..");
+        System.out.println(this.taskID);       
+    }
