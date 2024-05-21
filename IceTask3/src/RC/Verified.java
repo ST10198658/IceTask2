@@ -276,3 +276,24 @@ public void SearchByDeveloper(){
   }
 }
 }
+public void SearchByName(){
+    Scanner sc = new Scanner(System.in);
+// Prompt user for known developer name.
+    System.out.println("Please enter the NAME of the task you are looking for.");
+    System.out.print("\nTASK NAME: ");
+    String target = sc.next();
+
+  // Loop through the array
+  for (int i = 0; i < tasks.length; i++) {
+    // Compare each element with the target
+    if (tasks[i].taskName.toLowerCase().contains(target.toLowerCase())) {
+      // Return the index if a match is found
+        System.out.println("Task found!: " + tasks[i].taskName + " at index " + i);
+        System.out.println("TASK NAME: " + tasks[i].taskName + "TASK STATUS: " + tasks[i].status );
+        return;
+    }else{
+        // If not found.
+        System.out.println("Not found!");
+  }
+}
+}
