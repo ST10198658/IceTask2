@@ -170,4 +170,12 @@ length = tasks.length;
 for (int i = 0; i < length; i++) {
     newDevDETAILSArray[i] = tasks[i].devDETAILS;
 }
+taskDeveloper = newDevDETAILSArray;
+
+// Create a new destination array with a larger size than the original "tasks" array.
+String[] newTaskNameArray = new String[tasks.length];
+
+// copy all the "taskName" from each task in the "tasks" array to the new array
+for (int i = 0; i < tasks.length; i++) {
+    newTaskNameArray[i] = tasks[i].taskName;
 }
