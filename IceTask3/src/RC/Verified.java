@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @author RC_Student_lab
  */
 public class Verified {
+    Populate p = new Populate();
     Task [] tasks;
 String [] taskDeveloper;
 String [] taskNames;
