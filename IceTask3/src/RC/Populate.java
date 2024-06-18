@@ -26,5 +26,9 @@ public class Populate {
 
       newTasks[3] = new Task();
       newTasks[3].setTask("Add Arrays", "0004", "11", "To Do", "Glenda Oberholzer");
+      
+      for (int i = 3; i < tasks.length; i++) {
+        newTasks[i + 1] = tasks[i];
+    
     }
 }
