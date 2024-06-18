@@ -30,5 +30,7 @@ public class Populate {
       for (int i = 3; i < tasks.length; i++) {
         newTasks[i + 1] = tasks[i];
     
+        return newTasks;
+          }
     }
-}
+
