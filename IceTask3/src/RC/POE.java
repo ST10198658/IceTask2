@@ -106,5 +106,9 @@ public class POE {
     private List<String> taskIDs = new ArrayList<>();
     private List<Integer> taskDurations = new ArrayList<>();
     private List<String> taskStatuses = new ArrayList<>();
+    
+    public boolean checkTaskDescription(String taskDescription) {
+        return taskDescription.length() <= 50;
+    }
     }     
     
