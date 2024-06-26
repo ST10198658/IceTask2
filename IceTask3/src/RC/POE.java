@@ -100,6 +100,11 @@ public class POE {
         
         
     }}class Task{
-        
+        String input = "";
+    private List<String> developers = new ArrayList<>();
+    private List<String> taskNames = new ArrayList<>();
+    private List<String> taskIDs = new ArrayList<>();
+    private List<Integer> taskDurations = new ArrayList<>();
+    private List<String> taskStatuses = new ArrayList<>();
     }     
     
