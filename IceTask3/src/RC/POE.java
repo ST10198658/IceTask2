@@ -114,5 +114,18 @@ public class POE {
     public String createTaskID(String taskName, int taskNumber, String developerLastName) {
         return taskName.substring(0, 2).toUpperCase() + ":" + taskNumber + ":" + developerLastName.substring(developerLastName.length() - 3).toUpperCase();
     }
+    
+    public String printTaskDetails(String taskStatus, String developerFirstName, String developerLastName, int taskNumber, String taskName, String taskDescription, String taskID, int taskDuration) {
+        StringBuilder taskDetails = new StringBuilder();
+        taskDetails.append("Task Status: ").append(taskStatus).append("\n");
+        taskDetails.append("Developer Details: ").append(developerFirstName).append(" ").append(developerLastName).append("\n");
+        taskDetails.append("Task Number: ").append(taskNumber).append("\n");
+        taskDetails.append("Task Name: ").append(taskName).append("\n");
+        taskDetails.append("Task Description: ").append(taskDescription).append("\n");
+        taskDetails.append("Task ID: ").append(taskID).append("\n");
+        taskDetails.append("Task Duration: ").append(taskDuration).append(" hours\n");
+        return taskDetails.toString();
+    }
+    
     }     
     
