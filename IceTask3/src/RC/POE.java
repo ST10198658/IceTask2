@@ -134,4 +134,14 @@ public class POE {
         taskStatuses.add(taskStatus);}
     
     }     
-    
+    public void showTaskReport() {
+        StringBuilder report = new StringBuilder();
+        for (int i = 0; i < taskNames.size(); i++) {
+            report.append("Task Name: ").append(taskNames.get(i)).append("\n");
+            report.append("Developer: ").append(developers.get(i)).append("\n");
+            report.append("Task ID: ").append(taskIDs.get(i)).append("\n");
+            report.append("Task Duration: ").append(taskDurations.get(i)).append(" hours\n");
+            report.append("Task Status: ").append(taskStatuses.get(i)).append("\n\n");
+        }
+        JOptionPane.showMessageDialog(null, report.toString());
+    }
