@@ -126,6 +126,12 @@ public class POE {
         taskDetails.append("Task Duration: ").append(taskDuration).append(" hours\n");
         return taskDetails.toString();
     }
+    public void addTask(String taskName, String taskDescription, String developer, String taskID, int taskDuration, String taskStatus) {
+        taskNames.add(taskName);
+        developers.add(developer);
+        taskIDs.add(taskID);
+        taskDurations.add(taskDuration);
+        taskStatuses.add(taskStatus);}
     
     }     
     
