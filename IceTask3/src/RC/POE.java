@@ -144,4 +144,16 @@ public class POE {
             report.append("Task Status: ").append(taskStatuses.get(i)).append("\n\n");
         }
         JOptionPane.showMessageDialog(null, report.toString());
+    } 
+public void displayDoneTasks() {
+        StringBuilder doneTasks = new StringBuilder();
+        doneTasks.append("Tasks with status 'Done':\n");
+        for (int i = 0; i < taskNames.size(); i++) {
+            if (taskStatuses.get(i).equals("Done")) {
+                doneTasks.append("Developer: ").append(developers.get(i)).append(", ");
+                doneTasks.append("Task Name: ").append(taskNames.get(i)).append(", ");
+                doneTasks.append("Task Duration: ").append(taskDurations.get(i)).append(" hours\n");
+            }
+        }
+        JOptionPane.showMessageDialog(null, doneTasks.toString());
     }
