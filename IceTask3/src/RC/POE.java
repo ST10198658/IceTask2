@@ -180,3 +180,13 @@ public void searchTaskByName(String name) {
         }
         JOptionPane.showMessageDialog(null, result.toString());
     }
+public void searchTasksByDeveloper(String developer) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < developers.size(); i++) {
+            if (developers.get(i).contains(developer)) {
+                result.append("Task Name: ").append(taskNames.get(i)).append(", ");
+                result.append("Task Status: ").append(taskStatuses.get(i)).append("\n");
+            }
+        }
+        JOptionPane.showMessageDialog(null, result.toString());
+    }
