@@ -157,3 +157,14 @@ public void displayDoneTasks() {
         }
         JOptionPane.showMessageDialog(null, doneTasks.toString());
     }
+public void displayLongestTask() {
+        int maxDuration = 0;
+        int maxIndex = 0;
+        for (int i = 0; i < taskDurations.size(); i++) {
+            if (taskDurations.get(i) > maxDuration) {
+                maxDuration = taskDurations.get(i);
+                maxIndex = i;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Task with longest duration:\nDeveloper: " + developers.get(maxIndex) + ", Duration: " + maxDuration + " hours");
+    }
