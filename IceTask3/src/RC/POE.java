@@ -168,3 +168,15 @@ public void displayLongestTask() {
         }
         JOptionPane.showMessageDialog(null, "Task with longest duration:\nDeveloper: " + developers.get(maxIndex) + ", Duration: " + maxDuration + " hours");
     }
+public void searchTaskByName(String name) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < taskNames.size(); i++) {
+            if (taskNames.get(i).equals(name)) {
+                result.append("Task Name: ").append(taskNames.get(i)).append("\n");
+                result.append("Developer: ").append(developers.get(i)).append("\n");
+                result.append("Task Status: ").append(taskStatuses.get(i)).append("\n");
+                break;
+            }
+        }
+        JOptionPane.showMessageDialog(null, result.toString());
+    }
