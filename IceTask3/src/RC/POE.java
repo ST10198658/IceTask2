@@ -190,3 +190,18 @@ public void searchTasksByDeveloper(String developer) {
         }
         JOptionPane.showMessageDialog(null, result.toString());
     }
+
+public void deleteTask(String taskName) {
+        for (int i = 0; i < taskNames.size(); i++) {
+            if (taskNames.get(i).equals(taskName)) {
+                taskNames.remove(i);
+                developers.remove(i);
+                taskIDs.remove(i);
+                taskDurations.remove(i);
+                taskStatuses.remove(i);
+                JOptionPane.showMessageDialog(null, "Task '" + taskName + "' deleted successfully.");
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Task '" + taskName + "' not found.");
+    }
