@@ -110,5 +110,9 @@ public class POE {
     public boolean checkTaskDescription(String taskDescription) {
         return taskDescription.length() <= 50;
     }
+    
+    public String createTaskID(String taskName, int taskNumber, String developerLastName) {
+        return taskName.substring(0, 2).toUpperCase() + ":" + taskNumber + ":" + developerLastName.substring(developerLastName.length() - 3).toUpperCase();
+    }
     }     
     
